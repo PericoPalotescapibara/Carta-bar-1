@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tu Restaurante</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f8f8f8;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #111, #333);
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    nav {
+      background: #ffffff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 15px 10px;
+      gap: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #222;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #d35400;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2rem;
+      color: #111;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 14px;
+      padding: 20px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    }
+
+    .card h3 {
+      margin-bottom: 8px;
+      color: #d35400;
+      font-size: 1.2rem;
+    }
+
+    .price {
+      font-weight: bold;
+      color: #111;
+      margin-bottom: 8px;
+      display: inline-block;
+    }
+
+    .call-section {
+      text-align: center;
+      margin: 50px 0;
+    }
+
+    .call-btn {
+      display: inline-block;
+      background: #d35400;
+      color: white;
+      text-decoration: none;
+      padding: 15px 30px;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .call-btn:hover {
+      background: #a84300;
+    }
+
+    footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Tu Restaurante</h1>
+    <p>El sabor que te hará volver.</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#entrantes">Entrantes</a></li>
+      <li><a href="#principales">Principales</a></li>
+      <li><a href="#postres">Postres</a></li>
+      <li><a href="#bebidas">Bebidas</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+
+    <section id="entrantes">
+      <h2 class="section-title">Entrantes</h2>
+      <div class="menu-grid">
+        <div class="card">
+          <h3>Nachos</h3>
+          <span class="price">6€</span>
+          <p>Con queso y guacamole.</p>
+        </div>
+        <div class="card">
+          <h3>Alitas BBQ</h3>
+          <span class="price">8€</span>
+          <p>Picantes o suaves.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="principales" style="margin-top: 50px;">
+      <h2 class="section-title">Principales</h2>
+      <div class="menu-grid">
+        <div class="card">
+          <h3>Hamburguesa Clásica</h3>
+          <span class="price">10€</span>
+          <p>Carne, queso, lechuga y tomate.</p>
+        </div>
+        <div class="card">
+          <h3>Pizza Margarita</h3>
+          <span class="price">9€</span>
+          <p>Tomate, mozzarella y albahaca.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="postres" style="margin-top: 50px;">
+      <h2 class="section-title">Postres</h2>
+      <div class="menu-grid">
+        <div class="card">
+          <h3>Tarta de Chocolate</h3>
+          <span class="price">5€</span>
+          <p>Postre casero irresistible.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="bebidas" style="margin-top: 50px;">
+      <h2 class="section-title">Bebidas</h2>
+      <div class="menu-grid">
+        <div class="card">
+          <h3>Refrescos</h3>
+          <span class="price">2€</span>
+          <p>Varios sabores disponibles.</p>
+        </div>
+        <div class="card">
+          <h3>Cerveza</h3>
+          <span class="price">3€</span>
+          <p>Servida bien fría.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="call-section">
+      <a class="call-btn" href="tel:+34123456789">Llama</a>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Tu Restaurante - Todos los derechos reservados</p>
+  </footer>
+
+</body>
+</html>
